@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+
+}
+h1{
+color:white;
+text-align: center;
+font-size: clamp(2rem, 5vw, 4rem);
+animation: parpadeo 1.5s infinite;
+}
+
+@keyframes parpadeo {
+    0%, 100% {
+        opacity: 1; text-shadow: 0 0 10px #fff;
+    }
+    50% {
+        opacity: 0.6; text-shadow: 0 0 20px #ff0;
+    }
+}
+
+.galeria {
+    
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
+}
+.galeria img {
+    align-items: center;
+    width: 300px;
+    height: auto;
+    scroll-snap-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+#primerparrafo {
+    margin-top: -30px;
+    text-align: center;
+    font-size: 1.2em;
+    text-align: center;
+    color: black;
+}
+
+footer {
+    position: down;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
